@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doa Mu'adz bin Jabal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section with Animation -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container fade-in">
+            <h1>Doa Mu'adz bin Jabal</h1>
+            <p class="lead">"Allahumma inni as'aluka imaanan la yartaddu, wa na'iman la yanfaddu, wa muraafaqata nabiyyika Muhammadin sallallahu 'alaihi wa sallama fi a'laa darajaatil jannah, jannatil khuld."</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+                <text x="50%" y="50%" text-anchor="middle" class="svg-text">
+                    Doa Mu'adz bin Jabal
+                </text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Doa Section -->
+    <section class="py-5">
+        <div class="container fade-in">
+            <h2 class="text-center mb-4">Penjelasan Doa</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Asbabul Wurud</h4>
+                    <p>Doa ini diucapkan oleh Rasulullah shallallahu 'alaihi wa sallam kepada Mu'adz bin Jabal saat beliau diutus sebagai gubernur ke Yaman. Rasulullah mengajarkan doa ini agar Mu'adz memohon iman yang kokoh, kenikmatan yang tidak pernah habis, serta kemuliaan bersama Nabi Muhammad di surga yang tertinggi.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Isi Doa</h4>
+                    <p>Doa ini berisi permohonan agar Allah memberikan:</p>
+                    <ul>
+                        <li>Iman yang tidak goyah</li>
+                        <li>Kenikmatan yang abadi</li>
+                        <li>Kedudukan bersama Nabi Muhammad di surga</li>
+                    </ul>
+                    <p>Hadits ini diriwayatkan oleh Imam Ahmad dalam <strong>Musnad Ahmad</strong> (no. 22007) dan At-Tabarani dalam <strong>Al-Mu'jam Al-Kabir</strong>, dengan status <strong>hasan</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arabic Text Section -->
+    <section class="bg-light py-5">
+        <div class="container text-center fade-in">
+            <h2>Doa dalam Bahasa Arab</h2>
+            <p class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ إِيمَانًا لَا يَرْتَدُّ، وَنَعِيمًا لَا يَنْفَدُّ، وَمُرَافَقَةَ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي أَعْلَى دَرَجَاتِ الْجَنَّةِ، جَنَّةِ الْخُلْدِ.</p>
+            <p class="translation">"Ya Allah, aku memohon kepada-Mu iman yang tidak pernah goyah, kenikmatan yang tidak pernah habis, dan kedudukan bersama Nabi-Mu Muhammad shallallahu 'alaihi wa sallam di derajat tertinggi surga yang kekal."</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4 fade-in">
+        <div class="container">
+            <p>&copy; 2024 Doa Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS for Animations -->
+    <script>
+        // Fade in animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            fadeIns.forEach((fadeIn, index) => {
+                setTimeout(() => {
+                    fadeIn.classList.add('visible');
+                }, 500 * index); // Delay for smooth appearance
+            });
+        });
+
+        // Animasi SVG
+        const svgText = document.querySelector('.svg-text');
+        svgText.style.fill = 'none';
+        svgText.style.stroke = '#fff';
+        svgText.style.strokeWidth = '2';
+        svgText.style.strokeDasharray = '450';
+        svgText.style.strokeDashoffset = '450';
+
+        setTimeout(() => {
+            svgText.style.transition = 'stroke-dashoffset 2s ease-in-out';
+            svgText.style.strokeDashoffset = '0';
+        }, 500);
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bg-primary {
+            background-color: #007bff;
+        }
+
+        .arabic-text {
+            font-size: 1.5rem;
+            font-family: 'Amiri', serif;
+            color: #333;
+        }
+
+        .translation {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* SVG text animation */
+        .svg-text {
+            font-size: 48px;
+            font-weight: bold;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 1px;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 3s forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom footer */
+        footer {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+
+</body>
+
+</html>
